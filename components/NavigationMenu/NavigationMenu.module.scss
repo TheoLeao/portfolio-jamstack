@@ -176,7 +176,7 @@
                     margin-right: 0px;
                 }
             }
-            .li-dropdown {
+            .li_dropdown {
                 display: flex;
                 transition-duration: 0.5s;
                 font-size: $sizeTextCTA;
@@ -190,7 +190,7 @@
                         margin-left: 0px;
                     }
             }
-            .li-dropdown:hover {
+            .li_dropdown:hover {
                 color: $CG_RougePrincipal;
             }
             .dropdown {
@@ -241,8 +241,8 @@
                     }
                 }
             }
-            .li-dropdown:hover > ul,
-            .li-dropdown ul:hover {
+            .li_dropdown:hover > ul,
+            .li_dropdown ul:hover {
                 visibility: visible;
                 opacity: 1;
                 display: block;
