@@ -1,0 +1,38 @@
+@import "../../../styles/abstracts/mixins";
+@import "../../../styles/abstracts/variables";
+
+.btnInverse {
+    //btn
+    -webkit-appearance: none;
+    text-decoration: none;
+    display: block;
+    background-color: $CG_WhiteIvoire; 
+    color: $CG_RougePrincipal;
+    border-radius: 25px;
+    border: 0px;
+    padding: 5px 15px;
+    width: auto;
+    font-weight: 600;
+    transition: all 0.2s ease-in;
+
+    //btnInverse
+    background-color: $CG_RougePrincipal;
+    color: $CG_WhiteIvoire;
+}
+
+.btnInverse:hover {
+    transform: scale(1.1);
+    color: $CG_RougePrincipal;
+    text-decoration: none;
+}
+.btnInverse:active, .btnInverse:visited, .btnInverse:hover, .btnInverse:focus  {
+    color:white;
+    outline: none;
+}
+.btnInverse:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,90 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.sectionHello {
+    h2 {
+        font-size: 18px;
+        color: $grey;
+    }
+    h1 {
+        font-size: $sizeTitle--mobile;
+        font-weight: $regular;
+        img {
+            height: 22px;
+        }
+    }
+    .avatar {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    a {
+        display: inline-block;
+    }
+    .btnInverse {
+        display: flex !important;
+        justify-content: center;
+        max-width: 160px;
+        font-size: 13px;
+        margin-top: 30px;
+    }
+}
+
+@include respond-to("M") {
+    .sectionHello {
+        @include flex-column-verticalEvenly;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        .btnInverse {
+            display: flex !important;
+            justify-content: center;
+            max-width: 210px;
+            font-size: $sizeText;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        h1 {
+            display: inline-block;
+            max-width: 500px;
+            text-align: center;
+            letter-spacing: 2.4px;
+            font-weight: $semi-bold;
+            font-size: $sizeTitle;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: $sizeSubTitle;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            display: block;
+            width: 80px;
+            height: 80px;
+
+            margin-bottom: 15px;
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 200px;
+                object-position: -3px 0px;
+                object-fit: cover;
+            }
+        }
+        .description {
+            display: block;
+            width: 75%;
+            background-color: $CG_White;
+            p {
+                font-size: $sizeText;
+                font-weight: $regular;
+                text-align: center;
+                letter-spacing: 0.18px;
+            }
+        }
+        a {
+            display: block;
+        }
+    }
+}

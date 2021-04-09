@@ -1,3 +1,28 @@
-.container{
-    background-color: red;
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.inverseColor {
+    color: $CG_WhiteIvoire;
+}
+.container {
+    width: 85vw;
+}
+.full-width {
+    width: 100%;
+}
+.margin_constraint {
+    @include flex-column-verticalHorizontalCenter;
+    width: $margin-constraint-width;
+    flex:1;
+}
+.useful_width {
+    width: 100%;
+    max-width: $useful-width;
+}
+.redBackgroundSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $CG_RougePrincipal;
 }
