@@ -1,63 +1,84 @@
-@import "../../styles/abstracts/mixins";
-@import "../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+@import "../../../styles/abstracts/variables";
 
-.header {
-    padding: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    height: $navbar_height;
-    width: 100%;
-    label {
-        font-size: 2.5em;
-        z-index: 9999;
-    }
+.nav {
+    position: absolute;
+    //Comportement
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 900;
+    transition: transform 0.3s ease;
+    //Position
+    top: 0;
+    right: 0;
+    //Dimension
+    height: 100vh;
+    min-height: 100vh;
+    width: 320px;
+    //Apparence
+    background-color: $CG_Grey1;
 
-    label {
-        margin-right: 20px;
-    }
-
-    button:active:focus {
-        outline: none;
-    }
-    .sronly {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-    input {
-        display: none;
-    }
-    input[type="checkbox"]:checked ~ nav {
+    .menu_navigation {
+        padding-inline-start: 0px;
+        //Comportement
         display: flex;
-        justify-content: flex-start;
-        padding-top: 45px;
-    }
-    input[type="checkbox"]:checked ~ label {
-        color: white;
+        flex-direction: column;
+        //Apparence
+        list-style: none;
+        height: 350px;
+        justify-content: space-between;
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            span {
+                margin-right: 10px;
+            }
+        }
+        .li_dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                color: white;
+                font-size: $sizeTitle--mobile;
+                margin-left: -48px;
+            }
+
+            ul {
+                width: 100%;
+                padding-inline-start: 35px;
+                li {
+                    a {
+                        font-size: $sizeSubTitle--mobile;
+                    }
+                }
+            }
+        }
+        a {
+            border-bottom: 1px solid $CG_Grey1;
+            text-decoration: none;
+            display: block;
+            width: 65%;
+            font-size: $sizeLienMenu--mobile;
+            @include flex-row-verticalCenter;
+            color: white;
+            text-align: left;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            color: $CG_RougePrincipal;
+        }
     }
 }
-/* Menu navigation */
-
 
 @include respond-to("M") {
-    .header {
-        margin-bottom: 40px;
-        input[type="checkbox"]:checked ~ nav {
-            display: flex;
-        }
-        label {
-            display: none;
-        }
-    }
-
     .nav {
         display: block;
         margin-right: 20px;
