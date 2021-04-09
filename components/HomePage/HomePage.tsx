@@ -1,8 +1,10 @@
+import {useContext} from 'react'
 //Styles
 import styles from './HomePage.module.scss'
 //Components
 import NavigationMenu from './../NavigationMenu/NavigationMenu'
 import HelloSection from './../HelloSection/HelloSection'
+import HomePageContext from '../../contexts/HomePageContext'
 
 const HomePage = () => {
     return (

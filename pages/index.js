@@ -8,12 +8,12 @@ import HomePage from '../components/HomePage/HomePage'
 //Data Fetching
 import { GetAllCategories, GetAllProjectsCategories, GetAllBlogsCategories, GetAllAudiovisuelsProjects, GetAllWebProjects, GetAllGraphicsProjects, GetAllMarketingProjects, GetHomepageData } from '../lib/api'
 
-export default function Home({ data }) {
-  console.log(data)
+export default function Home() {
   return (
     <>
       <GlobalHead></GlobalHead>
-      <HomePage homePageData={data.homePageData}></HomePage>
+        <HomePage homePageData={''}></HomePage>
+
     </>
 
   )
@@ -43,7 +43,7 @@ export async function getStaticProps() {
           allAudiovisuelsProjects: allAudiovisuelsProjects.data,
           allGraphicsProjects: allGraphicsProjects.data,
           allMarketingProjects: allMarketingProjects.data
-          
+
 
         },
         pages: {
