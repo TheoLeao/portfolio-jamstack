@@ -1,29 +1,26 @@
 import styles from './HelloSection.module.scss'
+import parse from 'html-react-parser';
 
 //Components
 import ButtonReverse from './../Buttons/ButtonReverse/ButtonReverse';
 
-const HelloSection = () => {
+const HelloSection = ({homePageData}) => {
     return (
 
         <section className={styles.sectionHello}>
             <div className={styles.avatar}>
-                <img src="ressources/img/avatars/avatar.png" alt="Avatar bitmoji illustrant Théo Boudier, développeur web"/>
+                <img src={homePageData.headerBitmoji.mediaItemUrl} alt={homePageData.headerBitmoji.altText}/>
         </div>
-                <h2>Salut, je suis Théo Boudier</h2>
-                <h1>Développeur web ainsi que créateur de contenu digital 
+                <h2>{homePageData.headerHelloTitle}</h2>
+                <h1>{homePageData.headerJobTitle} 
                     <img
-                    src="ressources/img/icons/iconsIOS/iconIOS_Signe2Doigts.png"
-                    alt="emoticone apple qui fait un signe avec ses doigts"/>
+                    src={homePageData.headerJobTitleEmoji.mediaItemUrl}
+                    alt={homePageData.headerJobTitleEmoji.altText}/>
         </h1>
                     <div className={styles.description}>
-                        <p>Passionné par le monde du web, mes formations pluridisciplinaires m’ont permis de développer un
-                            ensemble de compétences, principalement dans <b>le développement web</b> mais également dans le
-                            graphisme, l’audiovisuel, la communication ainsi que la gestion de projets. Ces différentes
-                            compétences me permettront d'<b>organiser et de conduire votre projet web</b> de bout en bout ou
-                            bien d'<b>intégrer votre équipe de développement</b>.</p>
+                        <p>{parse(homePageData.headerDescription)}</p>
                     </div>
-                   <ButtonReverse children="Télécharger mon CV" href="https://www.theoboudier.fr/ressources/uploads/BOUDIERTheo-CV2021.pdf" target="_blank"></ButtonReverse>
+                   <ButtonReverse children={homePageData.headerButtonActionText} href={homePageData.headerButtonActionUrl} target="_blank"></ButtonReverse>
                     <span></span>
 
     </section>

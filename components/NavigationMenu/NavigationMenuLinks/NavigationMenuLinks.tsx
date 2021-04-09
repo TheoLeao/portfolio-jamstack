@@ -1,6 +1,8 @@
 import styles from './NavigationMenuLinks.module.scss'
 
-const NavigationMenuLinks = () => {
+const NavigationMenuLinks = (allProjectsCategories) => {
+
+
     return (
 
         <nav className={styles.nav}>
@@ -34,10 +36,15 @@ const NavigationMenuLinks = () => {
                 </span>
 
                     <ul className={styles.dropdown}>
-                        <li><a href="projets/developpement-web/">Développement web</a></li>
-                        <li><a href="projets/marketing-numerique/">Marketing numérique</a></li>
-                        <li><a href="projets/graphisme/">Graphisme</a></li>
-                        <li><a href="projets/audiovisuel/">Audiovisuel</a></li>
+                        {
+
+                            allProjectsCategories.allProjectsCategories.categories.nodes.map(
+                                category => {
+                                    return <li><a href={`projets/${category.slug}`}>{category.name}</a></li>;
+                                }
+                            )
+
+                        }
                     </ul>
                 </li>
                 <li>

@@ -1,14 +1,12 @@
-import AppProvider from "../providers/AppProvider";
 import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
+  
+
   return (
-    <AppProvider>
       <Component {...pageProps} />
-    </AppProvider>
   )
 
 }
-
 export async function getStaticProps() {
   const allCategories = await GetAllCategories();
   const allProjectsCategories = await GetAllProjectsCategories();
@@ -20,6 +18,8 @@ export async function getStaticProps() {
   const allMarketingProjects = await GetAllMarketingProjects();
 
   const homePageData = await GetHomepageData();
+
+
   return {
     props: {
       data: {
@@ -44,4 +44,5 @@ export async function getStaticProps() {
     }
   }
 }
+
 export default MyApp

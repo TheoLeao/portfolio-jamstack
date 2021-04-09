@@ -15,7 +15,7 @@ export default function NavigationMenu({allProjectsCategories}) {
                 <span className={styles.sronly}>Menu</span>
                 <span>&#9776;</span>
             </label>
-            <NavigationMenuLinks></NavigationMenuLinks>
+            <NavigationMenuLinks allProjectsCategories={allProjectsCategories}></NavigationMenuLinks>
         </header>
     </>)
 }
