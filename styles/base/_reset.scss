@@ -1,5 +1,3 @@
-
-/* RESET */
 *,
 *::before,
 *::after {
@@ -354,8 +352,7 @@ p,
 span, button, li {
     font-family: "Inter", sans-serif;
 }
-
-
+//Complement
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 html {
   box-sizing: border-box;
@@ -386,9 +383,10 @@ section {
   margin-bottom: 30px;
 }
 body {
+  //background-color: $CG_WhiteIvoire;
   display: flex;
     flex-direction: column;
     align-items: center;
-  background-color: #fbfbfd;
+  background-color: $CG_WhiteIvoire;
   overflow: hidden;
 }
