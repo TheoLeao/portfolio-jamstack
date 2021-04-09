@@ -1,12 +1,15 @@
-import {useContext} from 'react'
+import {useContext} from 'react';
 //Styles
-import styles from './HomePage.module.scss'
+import styles from './HomePage.module.scss';
 //Components
-import NavigationMenu from './../NavigationMenu/NavigationMenu'
-import HelloSection from './../HelloSection/HelloSection'
-import HomePageContext from '../../contexts/HomePageContext'
+import NavigationMenu from '../NavigationMenu/NavigationMenu';
+import HelloSection from '../HelloSection/HelloSection';
+import { AppContext } from '../../providers/AppProvider';
+//Contexts
+//import { AppContext } from '../../providers/AppProvider';
 
 const HomePage = () => {
+    const { data } = useContext(AppContext);
     return (
         <>
             <NavigationMenu></NavigationMenu>
