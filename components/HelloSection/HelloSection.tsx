@@ -23,7 +23,7 @@ const HelloSection = () => {
                             compétences me permettront d'<b>organiser et de conduire votre projet web</b> de bout en bout ou
                             bien d'<b>intégrer votre équipe de développement</b>.</p>
                     </div>
-                   <ButtonReverse children="Télécharger mon CV"></ButtonReverse>
+                   <ButtonReverse children="Télécharger mon CV" href="https://www.theoboudier.fr/ressources/uploads/BOUDIERTheo-CV2021.pdf" target="_blank"></ButtonReverse>
                     <span></span>
 
     </section>

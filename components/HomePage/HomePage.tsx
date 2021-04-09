@@ -4,8 +4,7 @@ import styles from './HomePage.module.scss'
 import NavigationMenu from './../NavigationMenu/NavigationMenu'
 import HelloSection from './../HelloSection/HelloSection'
 
-const HomePage = ({allCategories}) => {
-    console.log(allCategories)
+const HomePage = () => {
     return (
         <>
             <NavigationMenu></NavigationMenu>
