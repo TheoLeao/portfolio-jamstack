@@ -1,0 +1,43 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.titreSection {
+    @include flex-column-HorizontalLeft;
+    width: auto;
+    margin-bottom: 30px;
+    h2 {
+        font-size: $sizeTitle--mobile;
+        font-weight: $medium;
+        margin-bottom: 0;
+    }
+    .barreHorizontal {
+        width: 56px;
+    }
+    .barreHorizontal{
+        min-width: 50px;
+        border-radius: 20px;
+        background-color: $CG_RougePrincipal;
+    }
+    .barreVertical {
+        min-height: 50px;
+        min-width: 3px;
+        background-color: $CG_RougePrincipal;
+        border-radius: 20px;
+        margin: 0px 12px 0px 5px;
+    }
+    .h2px {
+        height: 2px;
+    }
+    .h3px {
+        height: 3px;
+    }
+}
+
+@include respond-to("M") {
+    .titreSection {
+        h2 {
+            font-size: $sizeTitle;
+        }
+    }
+}
+

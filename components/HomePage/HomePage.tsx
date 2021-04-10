@@ -1,9 +1,9 @@
-import {useContext} from 'react';
-//Styles
-import styles from './HomePage.module.scss';
+import CareerSection from '../CareerSection/CareerSection';
+import HelloSection from '../HelloSection/HelloSection';
 //Components
 import NavigationMenu from '../NavigationMenu/NavigationMenu';
-import HelloSection from '../HelloSection/HelloSection';
+//Styles
+import styles from './HomePage.module.scss';
 //Contexts
 
 const HomePage = ({data}) => {
@@ -14,6 +14,7 @@ const HomePage = ({data}) => {
             <div className={styles.margin_constraint}>
                 <div className={styles.useful_width}>
                     <HelloSection homePageData={data.pages.homepage.homepageInfos.edges[0].node.homepageInfos}></HelloSection>
+                    <CareerSection homePageData={data.pages.homepage.homepageInfos.edges[0].node.homepageInfos}></CareerSection>
                 </div>
             </div>
         </>

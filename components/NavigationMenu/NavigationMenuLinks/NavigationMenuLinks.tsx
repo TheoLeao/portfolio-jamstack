@@ -39,8 +39,8 @@ const NavigationMenuLinks = (allProjectsCategories) => {
                         {
 
                             allProjectsCategories.allProjectsCategories.categories.nodes.map(
-                                category => {
-                                    return <li><a href={`projets/${category.slug}`}>{category.name}</a></li>;
+                                (category,i) => {
+                                    return <li key={i}><a href={`projets/${category.slug}`}>{category.name}</a></li>;
                                 }
                             )
 

@@ -1,0 +1,11 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.sectionParcours {
+    height: auto;
+    .parcours {
+        @include flex-row-HorizontalBetween;
+        flex-wrap: wrap;
+        height: auto;
+    }
+}

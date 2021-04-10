@@ -1,0 +1,11 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.barreVertical {
+    min-height: 50px;
+    min-width: 3px;
+    background-color: $CG_RougePrincipal;
+    border-radius: 20px;
+    margin: 0px 12px 0px 5px;
+    height: 100%;
+}
