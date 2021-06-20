@@ -1,0 +1,62 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.categorie {
+    @include flex-column;
+    //align-items: center;
+    margin-bottom: 20px;
+    transition: $easeIn-2s;
+    .imgCategorie {
+        height: 20vw;
+        max-height: 150px;
+        min-height: 115px;
+        width: 20vw;
+        max-width: 150px;
+        min-width: 115px;  
+        margin-right: 5px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    svg {
+        margin-left: 10px;
+    }
+    .infoCategorie {
+        @include flex-column-verticalBetween;
+        margin-left: 10px;
+    }
+    h4 {
+        color: $CG_Grey1;
+        margin-bottom: 0px;
+        //Pour restreindre la longueur et avoir une hauteur égale si le titre fait 2 lignes
+        max-width: 150px;
+        min-height: 54px;
+        font-size: 16px;
+    }
+    span {
+        display: inline-block;
+        font-size: $sizeTextAdditionnal--mobile;
+        color: $CG_Grey1;
+        max-width: 150px;
+    }
+    a {
+        margin-top: 5px;
+        color: $CG_RougePrincipal;
+        text-decoration: none;
+        font-size: $sizeTextCTA--mobile;
+        font-weight: $bold;
+    }
+}
+.categorie:hover {
+    transform: translateY(-10px);
+}
+@include respond-to('M'){
+    .categorie{
+        h4{
+            font-size: $sizeTextCTA;
+        }
+    }
+}
