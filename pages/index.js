@@ -6,9 +6,10 @@ import styles from '../styles/Home.module.css'
 import GlobalHead from '../components/GlobalHead/GlobalHead'
 import HomePage from '../components/HomePage/HomePage'
 //Data Fetching
-import { GetAllCategories, GetAllProjectsCategories, GetAllBlogsCategories, GetAllAudiovisuelsProjects, GetAllWebProjects, GetAllGraphicsProjects, GetAllMarketingProjects, GetHomepageData } from '../lib/api'
+import { getAllCategories, getAllProjectsCategories, getAllBlogsCategories, getAllAudiovisuelsProjects, getAllWebProjects, getAllGraphicsProjects, getAllMarketingProjects, getHomepageData } from '../lib/api'
 
 export default function Home({data}) {
+  console.log(data)
   return (
     <>
       <GlobalHead></GlobalHead>
@@ -19,18 +20,15 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-  const allCategories = await GetAllCategories();
-  const allProjectsCategories = await GetAllProjectsCategories();
-  const allBlogsCategories = await GetAllBlogsCategories();
-
-  const allWebProjects = await GetAllWebProjects();
-  const allAudiovisuelsProjects = await GetAllAudiovisuelsProjects();
-  const allGraphicsProjects = await GetAllGraphicsProjects();
-  const allMarketingProjects = await GetAllMarketingProjects();
-
-  const homePageData = await GetHomepageData();
-
-
+  const allCategories = await getAllCategories();
+  const allProjectsCategories = await getAllProjectsCategories();
+  const allBlogsCategories = await getAllBlogsCategories();
+  const allWebProjects = await getAllWebProjects();
+  const allAudiovisuelsProjects = await getAllAudiovisuelsProjects();
+  const allGraphicsProjects = await getAllGraphicsProjects();
+  const allMarketingProjects = await getAllMarketingProjects();
+  const homePageData = await getHomepageData();
+  
   return {
     props: {
       data: {
